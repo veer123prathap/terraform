@@ -1,5 +1,5 @@
-#Useful Links for Terraform operations in an Azure environment.
-#Install:
+##### Useful Links for Terraform operations in an Azure environment.
+## Install:
 #Installing Terraform | Terraform
 #Install and configure Terraform to provision Azure resources - Azure Linux Virtual Machines
 #Provider: Azure
