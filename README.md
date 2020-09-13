@@ -35,3 +35,5 @@
 #Where to go from here?
 #https://linuxacademy.com/cp/modules/view/id/415
 # terraform
+## terraform init
+- it used to initialize configuration files successfully 
