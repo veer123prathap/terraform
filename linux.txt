@@ -1,0 +1,61 @@
+ls -ltr it list all the file with reverse order
+alias l="ls-ltr" this was alias cmd
+.bashrc  this is the file each terminal it will run when the terminal login
+if you change anything in that file we run this cmd: ..bashrc
+.bash_profile this file will run each time when the user login to the login
+if you made any changes into that file we need to run this cmd: ..bassh_profile
+we can run bash script file by using bash <file_name>
+other we need to pass chmod +x <file name>
+yum install wget -y
+The name nohup stands for "no hangup." The hangup (HUP) signal, which is normally sent to a process to inform it that the user has logged off (or "hung up"), is intercepted by nohup, allowing the process to continue running.
+ fg - forground
+bg -background
+cmd > ~/logout.txt --- outpiut will store in that file after executing the cmd
+ps -ef | grep <searching file >
+kill any pid by using kill <pid>
+`` or $variable name ---`pwd`or $PWD 
+what ever you echo in singe quote just it will print that echo 'hai $user'
+when you use double quote it will take variable what we assign print that name
+$?--exit status of last cmd
+if you want execute multiple cmd: ls script.sh && echo "found"
+ls script.sh || echo "found" --- if this is an or condition once the first half will fail then second half will execute
+if you what to run the script it was running or not : test -f script.sh
+>> hello.txt if you use this  two greater than it will append to your file.
+cat <<EOT 
+jsakdfh
+sjadfhsj
+EOT
+sudo passwd testuser --stdin <<< "test" --------this is the one line of text we can use three less than symbols
+
+cat <<EOT > message.txt
+It wkjerhwjk
+asjkdf
+assssabh
+EOT
+<----standard input
+>---standard output
+1>--standard input
+2>--error output
+ls cmd.txt hell.txt sjdkf 1> out.txt 2>&1----it wil copy standard output and standard input into the that out file
+ls -l /dev/sd*------file systems
+telnet
+yum install -y nc(netcat)
+nc -l 2020 >network.txt & -----it will open the port 
+echo "hi" > /dev/tcp/localhost/2020--------- it will redirect the hi to the network file
+in function 
+function myname {
+	echo $myname
+}
+saymyname
+.script2.sh----if you are call the any other script we need to use . or source
+ls -ltr | grep txt
+ll net
+ll--$0
+net--$1
+for f in *.sh
+
+done
+
+for f in *.sh; do mv $f $f.bash; done
+read line < /etc/passwd
+while read line ; do echo $line | grep vag;  done < /etc/passwd
