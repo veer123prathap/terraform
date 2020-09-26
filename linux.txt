@@ -59,3 +59,201 @@ done
 for f in *.sh; do mv $f $f.bash; done
 read line < /etc/passwd
 while read line ; do echo $line | grep vag;  done < /etc/passwd
+man is the cmd for help
+-d  for it will check for dir
+-e true file exit
+r  true if readable
+-f  true if file
+-s is not empty
+-w is it writable
+-x executable
+-z true if string is empty
+-n string if not empty
+if []
+then
+else
+fi
+if 
+then
+elif
+then
+else
+fi
+for 
+do
+	
+done
+renaming
+mv ${picture} ${date}-${picture}
+$@--it what was the parameter will accept one or more parameters
+read -p "promt text" variable-- which variable you want to use
+$0--is the name of the script
+$1 name of the first parameter
+$@--if you want to access all parameter we can use these
+ping -c 1 google.com
+c-----count
+
+ping -c 1 -w 1 google
+-w wait for 1 sec
+seperate the  commands with semicolon to ensure they all get executed
+cp test /temp ; cp test.txt /back
+-p ---make an parent
+hostname--cmd
+uptime--cmd
+execute all script from top to bottom
+function hell(){
+echo "hello $1"
+}
+hello veera
+
+function hell(){
+echo "hello $@"
+}
+hello veera vino ksdj
+
+return <code>-------we can pass explictly pass return code
+${date+%F}.$$
+F is the fomart of the date
+.$$ is the pid
+a*.txt
+a?.txt
+?----it matches exatly one charater
+[]--a character class
+ca[nt]*
+can
+cat
+candy
+catch
+[!aw]*
+[[:alpha:]]-------named char it matches lower and upper
+\---escape character
+[a-e]-it search in between all the in between them
+case  $variable-name  in
+                pattern1|pattern2|pattern3)       
+     		    command1
+                    ...
+                    ....
+                    commandN
+                    ;;
+                pattern4|pattern5|pattern6)
+     		    command1
+                    ...
+                    ....
+                    commandN
+                    ;;            
+                pattern7|pattern8|patternN)       
+     		    command1
+                    ...
+                    ....
+                    commandN
+                    ;;
+                *)              
+          esac 
+#!/bin/bash
+NOW=$(date +"%a")
+case $NOW in
+	Mon)	
+		echo "Full backup";;
+	Tue|Wed|Thu|Fri)
+		echo "Partial backup";;
+	Sat|Sun)	
+		echo "No backup";;
+	*) ;;
+esac
+log location
+/var/log/message
+/var/log/syslog
+logger -i -t myscript "message"
+((index++))
+First Commands, Navigating the Filesystem
+pwd / ls / cd
+; / && / &
+Getting Help
+-h
+man
+Viewing and Editing Files
+head / tail / cat / less
+nano / nedit
+Creating and Deleting Files and Directories
+touch
+mkdir / rm / rmdir
+Moving and Copying Files, Making Links, Command History
+mv / cp / ln
+Command History
+Directory Trees, Disk Usage, and Processes
+mkdir –p / tree
+df / du / ps
+Miscellaneous
+passwd / logout / exit
+clear / *
+Intermediate
+Disk, Memory, and Processor Usage
+ncdu
+top / htop
+REPLs and Software Versions
+REPLs
+-version / --version / -v
+Environment Variables and Aliases
+Environment Variables
+Aliases
+Basic bash Scripting
+bash Scripts
+Custom Prompt and ls
+Config Files
+Config Files / .bashrc
+Types of Shells
+Finding Things
+whereis / which / whatis
+locate / find
+Downloading Things
+ping / wget / curl
+apt / gunzip / tar / gzip
+Redirecting Input and Output
+| / > / < / echo / printf
+0 / 1 / 2 / tee
+Advanced
+Superuser
+sudo / su
+!!
+File Permissions
+File Permissions
+chmod / chown
+User and Group Management
+Users
+Groups
+Text Processing
+uniq / sort / diff / cmp
+cut / sed
+Pattern Matching
+grep
+awk
+Copying Files Over ssh
+ssh / scp
+rsync
+Long-Running Processes
+yes / nohup / ps / kill
+cron / crontab / >>
+Miscellaneous
+pushd / popd
+xdg-open
+xargs
+Bonus: Fun-But-Mostly-Useless Things
+w / write / wall / lynx
+nautilus / date / cal / bc
+B it disable ascii table o/p
+N it supress the column name to the o/p
+DEBuging
+-x is used for tracing
+#!/bin/bash-x
+set-x
+set+x to stop debug
+you want to set seperate portion of script
+set -x
+echo "hi"
+set +x
+
+-e exit on error code
+-ex
+-v -print the shell input lines as they are read
+-vx
+ps4='+ $BASH_SOURCE : $LINENO :'
